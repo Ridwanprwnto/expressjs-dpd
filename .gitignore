@@ -1,0 +1,10 @@
+# Config
+.vscode
+
+# Env
+.env
+.env.development
+.env_test
+.env.production
+
+node_modules

@@ -1,0 +1,19 @@
+{"level":"error","message":"Error in checkDataPickingController: checkDataPickingStoreModel is not a function","timestamp":"2025-07-30T19:33:19.510Z"}
+{"level":"error","message":"Error in checkDataPickingController: checkDataPickingStoreModel is not a function","timestamp":"2025-07-30T19:33:33.580Z"}
+{"level":"error","message":"Error in checkDataPickingController: checkDataPickingStoreModel is not a function","timestamp":"2025-07-30T19:34:08.443Z"}
+{"level":"error","message":"Error in checkDataPickingController: checkDataPickingStoreModel is not a function","timestamp":"2025-07-30T19:34:09.532Z"}
+{"level":"error","message":"Error in checkDataPickingController: checkDataPickingStoreModel is not a function","timestamp":"2025-07-30T19:34:10.243Z"}
+{"level":"error","message":"Error in checkDataPickingController: checkDataPickingStoreModel is not a function","timestamp":"2025-07-30T19:35:09.446Z"}
+{"level":"error","message":"Error in checkDataPickingController: checkDataPickingStoreModel is not a function","timestamp":"2025-07-30T19:35:47.889Z"}
+{"level":"error","message":"Error in checkDataPickingController: checkDataPickingStoreModel is not a function","timestamp":"2025-07-30T19:36:28.926Z"}
+{"level":"error","message":"Error saat mengambil data picking:","timestamp":"2025-07-30T19:48:11.591Z"}
+{"level":"error","message":"Error in checkDataPickingController: Invalid object name 'Split_Picking_2060323'.","timestamp":"2025-07-30T19:48:11.597Z"}
+{"level":"error","message":"Error in checkDataPickingController: checkDataPickingModel is not a function","timestamp":"2025-07-30T19:54:12.070Z"}
+{"level":"error","message":"Error in checkDataPickingController: checkDataPickingModel is not a function","timestamp":"2025-07-30T19:54:24.900Z"}
+{"level":"error","message":"Error saat mengambil data picking toko:","timestamp":"2025-07-30T19:56:37.680Z"}
+{"level":"error","message":"Error in checkDataPickingController: Cannot access 'urut' before initialization","timestamp":"2025-07-30T19:56:37.681Z"}
+{"level":"error","message":"Error in updateDataPickingModel: Tabel Split_Picking_XXXXXXX tidak ditemukan.","timestamp":"2025-07-30T20:53:39.224Z"}
+{"level":"error","message":"Error in updateDataPickingModel: Error saat memperbarui data picking:","timestamp":"2025-07-30T20:53:39.225Z"}
+{"level":"error","message":"Error in updateDataPickingController: Tabel Split_Picking_XXXXXXX tidak ditemukan.","timestamp":"2025-07-30T20:53:39.225Z"}
+{"level":"error","message":"Error in updateDataPickingController: nopick is not defined","timestamp":"2025-07-31T08:51:55.878Z"}
+{"level":"error","message":"Error in updateDataPickingController: nopick is not defined","timestamp":"2025-07-31T08:53:19.335Z"}

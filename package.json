@@ -1,0 +1,24 @@
+{
+  "name": "ws-ss-app",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "env:dev": "cp .env.development .env",
+    "env:test": "cp .env.test .env",
+    "env:prod": "cp .env.production .env"
+  },
+  "keywords": [],
+  "author": "ridwanpurwanto",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mssql": "^11.0.1",
+    "winston": "^3.17.0"
+  }
+}
