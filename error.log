@@ -17,3 +17,9 @@
 {"level":"error","message":"Error in updateDataPickingController: Tabel Split_Picking_XXXXXXX tidak ditemukan.","timestamp":"2025-07-30T20:53:39.225Z"}
 {"level":"error","message":"Error in updateDataPickingController: nopick is not defined","timestamp":"2025-07-31T08:51:55.878Z"}
 {"level":"error","message":"Error in updateDataPickingController: nopick is not defined","timestamp":"2025-07-31T08:53:19.335Z"}
+{"level":"error","message":"Error in updateDataPickingModel: Tabel Split_Picking_2152535 tidak ditemukan.","timestamp":"2025-08-13T09:50:04.343Z"}
+{"level":"error","message":"Error in updateDataPickingModel: Error saat memperbarui data picking:","timestamp":"2025-08-13T09:50:04.343Z"}
+{"level":"error","message":"Error in updateDataPickingController: Tabel Split_Picking_2152535 tidak ditemukan.","timestamp":"2025-08-13T09:50:04.343Z"}
+{"level":"error","message":"Error in updateDataPickingModel: Tabel Split_Picking_2152535 tidak ditemukan.","timestamp":"2025-08-13T09:55:42.045Z"}
+{"level":"error","message":"Error in updateDataPickingModel: Error saat memperbarui data picking:","timestamp":"2025-08-13T09:55:42.045Z"}
+{"level":"error","message":"Error in updateDataPickingController: Tabel Split_Picking_2152535 tidak ditemukan.","timestamp":"2025-08-13T09:55:42.046Z"}
