@@ -43,7 +43,7 @@ const checkDataPickingController = async (req, res) => {
 };
 
 const updateDataPickingController = async (req, res) => {
-    const seqno = req.param("seqNO");
+    const seqno = req.params.seqNO;
     const { pluid, zona, station, ip, id } = req.body;
     try {
         if (!seqno || !pluid || !zona || !station || !ip || !id) {

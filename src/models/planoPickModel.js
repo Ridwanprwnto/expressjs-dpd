@@ -44,7 +44,7 @@ const checkDataPickingModel = async (date, nopick, pluid) => {
 
         // Query untuk mengambil data item dari tabel yang dinamis
         const queryItem = `
-            SELECT NOTOKO, Line, PRDCD, PN_IP_DPD, PN_ID_DPD
+            SELECT PN_SEQ_FK_NO, NOTOKO, Line, PRDCD, PN_IP_DPD, PN_ID_DPD
             FROM Split_Picking_${urut} 
             WHERE NOTOKO = @nopick AND PRDCD = @pluid
         `;

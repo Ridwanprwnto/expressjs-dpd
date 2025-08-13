@@ -336,3 +336,37 @@
 {"level":"info","message":"POST /api-ssdc/main/planopick/datapick","timestamp":"2025-08-12T13:58:54.383Z"}
 {"level":"info","message":"Info in checkDataPickingModel: Tabel Split_Picking_2081521 tidak ditemukan.","timestamp":"2025-08-12T13:58:54.406Z"}
 {"level":"info","message":"Info in checkDataPickingController: Data picking date 2025-08-12 nopick 2152279 not found","timestamp":"2025-08-12T13:58:54.406Z"}
+{"level":"info","message":"Server is running on port 3200","timestamp":"2025-08-13T09:44:39.840Z"}
+{"level":"info","message":"GET /","timestamp":"2025-08-13T09:44:40.202Z"}
+{"level":"info","message":"GET /style.css","timestamp":"2025-08-13T09:44:40.230Z"}
+{"level":"info","message":"GET /api-ssdc/app/info","timestamp":"2025-08-13T09:44:40.318Z"}
+{"level":"info","message":"API /api-ssdc/app/info accessed","timestamp":"2025-08-13T09:44:40.320Z"}
+{"level":"info","message":"GET /favicon.ico","timestamp":"2025-08-13T09:44:40.381Z"}
+{"level":"info","message":"GET /","timestamp":"2025-08-13T09:44:43.350Z"}
+{"level":"info","message":"GET /style.css","timestamp":"2025-08-13T09:44:43.365Z"}
+{"level":"info","message":"GET /api-ssdc/app/info","timestamp":"2025-08-13T09:44:43.377Z"}
+{"level":"info","message":"API /api-ssdc/app/info accessed","timestamp":"2025-08-13T09:44:43.379Z"}
+{"level":"info","message":"POST /api-ssdc/main/planopick/datapick","timestamp":"2025-08-13T09:45:16.311Z"}
+{"level":"info","message":"Connected to SQL Server.","timestamp":"2025-08-13T09:45:16.478Z"}
+{"level":"info","message":"Info in checkDataPickingController: Data picking date 2025-08-13 nopick 2152535 and nopick 20053540 found","timestamp":"2025-08-13T09:45:16.515Z"}
+{"level":"info","message":"PUT /api-ssdc/main/planopick/datapick/2152535","timestamp":"2025-08-13T09:50:04.327Z"}
+{"level":"error","message":"Error in updateDataPickingModel: Tabel Split_Picking_2152535 tidak ditemukan.","timestamp":"2025-08-13T09:50:04.343Z"}
+{"level":"error","message":"Error in updateDataPickingModel: Error saat memperbarui data picking:","timestamp":"2025-08-13T09:50:04.343Z"}
+{"level":"error","message":"Error in updateDataPickingController: Tabel Split_Picking_2152535 tidak ditemukan.","timestamp":"2025-08-13T09:50:04.343Z"}
+{"level":"info","message":"POST /api-ssdc/main/planopick/datapick","timestamp":"2025-08-13T09:54:17.068Z"}
+{"level":"info","message":"Info in checkDataPickingController: Data picking date 2025-08-13 nopick 2152535 and nopick 20122285 found","timestamp":"2025-08-13T09:54:17.087Z"}
+{"level":"info","message":"PUT /api-ssdc/main/planopick/datapick/2152535","timestamp":"2025-08-13T09:55:42.036Z"}
+{"level":"error","message":"Error in updateDataPickingModel: Tabel Split_Picking_2152535 tidak ditemukan.","timestamp":"2025-08-13T09:55:42.045Z"}
+{"level":"error","message":"Error in updateDataPickingModel: Error saat memperbarui data picking:","timestamp":"2025-08-13T09:55:42.045Z"}
+{"level":"error","message":"Error in updateDataPickingController: Tabel Split_Picking_2152535 tidak ditemukan.","timestamp":"2025-08-13T09:55:42.046Z"}
+{"level":"info","message":"Server is running on port 3200","timestamp":"2025-08-13T10:06:06.505Z"}
+{"level":"info","message":"Server is running on port 3200","timestamp":"2025-08-13T10:06:12.867Z"}
+{"level":"info","message":"POST /api-ssdc/main/planopick/datapick","timestamp":"2025-08-13T10:06:15.456Z"}
+{"level":"info","message":"Connected to SQL Server.","timestamp":"2025-08-13T10:06:15.560Z"}
+{"level":"info","message":"Info in checkDataPickingController: Data picking date 2025-08-13 nopick 2152535 and nopick 20122285 found","timestamp":"2025-08-13T10:06:15.586Z"}
+{"level":"info","message":"POST /api-ssdc/main/planopick/datapick","timestamp":"2025-08-13T10:06:50.592Z"}
+{"level":"info","message":"Info in checkDataPickingController: Data picking date 2025-08-13 nopick 2152535 and nopick 20122285 found","timestamp":"2025-08-13T10:06:50.610Z"}
+{"level":"info","message":"PUT /api-ssdc/main/planopick/datapick/2081766","timestamp":"2025-08-13T10:07:49.891Z"}
+{"level":"info","message":"Info in updateDataPickingController: Data picking nomor 2081766 pluid 20122285 updated successfully","timestamp":"2025-08-13T10:07:49.935Z"}
+{"level":"info","message":"PUT /api-ssdc/main/planopick/datapick/2081766","timestamp":"2025-08-13T10:08:19.148Z"}
+{"level":"info","message":"Info in updateDataPickingController: Data picking nomor 2081766 pluid 20122285 updated successfully","timestamp":"2025-08-13T10:08:19.170Z"}
