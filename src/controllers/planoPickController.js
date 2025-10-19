@@ -1,5 +1,5 @@
-const { checkDataPickingModel, updateDataPickingModel } = require('../models/planoPickModel'); // Memperbaiki nama model
-const { logInfo, logError } = require('../utils/logger');
+const { checkDataPickingModel, updateDataPickingModel } = require("../models/planoPickModel"); // Memperbaiki nama model
+const { logInfo, logError } = require("../utils/logger");
 
 const checkDataPickingController = async (req, res) => {
     const { date, nopick, pluid } = req.body;
@@ -7,10 +7,10 @@ const checkDataPickingController = async (req, res) => {
     try {
         // Validasi input
         if (!date || !nopick || !pluid) {
-            logError('Error in checkDataPickingController: Date, Nopick, and PLUID are required');
+            logError("Error in checkDataPickingController: Date, Nopick, and PLUID are required");
             return res.status(400).json({
                 success: false,
-                message: 'Date, Nopick, and PLUID are required'
+                message: "Date, Nopick, and PLUID are required",
             });
         }
 
@@ -22,7 +22,7 @@ const checkDataPickingController = async (req, res) => {
             logInfo(`Info in checkDataPickingController: Data picking date ${date} nopick ${nopick} not found`);
             return res.status(404).json({
                 success: false,
-                message: `No data picking for date ${date} and nopick ${nopick} found`
+                message: `No data picking for date ${date} and nopick ${nopick} found`,
             });
         }
 
@@ -30,31 +30,30 @@ const checkDataPickingController = async (req, res) => {
         logInfo(`Info in checkDataPickingController: Data picking date ${date} nopick ${nopick} and nopick ${pluid} found`);
         return res.status(200).json({
             success: true,
-            data: response
+            data: response,
         });
-
     } catch (error) {
         logError(`Error in checkDataPickingController: ${error.message}`);
         return res.status(500).json({
             success: false,
-            message: error.message
+            message: error.message,
         });
     }
 };
 
 const updateDataPickingController = async (req, res) => {
     const seqno = req.params.seqNO;
-    const { pluid, zona, station, ip, id } = req.body;
+    const { pluid, line, ip, id } = req.body;
     try {
-        if (!seqno || !pluid || !zona || !station || !ip || !id) {
-            logError('Error in updateDataPickingController: PLUID, zona, station, IP, and ID are required');
+        if (!seqno || !pluid || !line || !ip || !id) {
+            logError("Error in updateDataPickingController: PLUID, line, IP, and ID are required");
             return res.status(400).json({
                 success: false,
-                message: 'Seqno, PLUID, zona, station, IP, and ID are required'
+                message: "Seqno, PLUID, Line, IP, and ID are required",
             });
         }
 
-        const response = await updateDataPickingModel(seqno, pluid, zona, station, ip, id);
+        const response = await updateDataPickingModel(seqno, pluid, line, ip, id);
 
         logInfo(`Info in updateDataPickingController: Data picking nomor ${seqno} pluid ${pluid} updated successfully`);
         return res.status(200).json(response);
@@ -62,12 +61,12 @@ const updateDataPickingController = async (req, res) => {
         logError(`Error in updateDataPickingController: ${error.message}`);
         return res.status(500).json({
             success: false,
-            message: error.message
+            message: error.message,
         });
     }
 };
 
-module.exports = { 
+module.exports = {
     checkDataPickingController,
-    updateDataPickingController
+    updateDataPickingController,
 };
