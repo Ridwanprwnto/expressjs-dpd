@@ -1,10 +1,14 @@
-# Config
+# Module
+node_modules/
+
+# Logs
+*.log
+
+# Config Text Editor
 .vscode
 
-# Env
+# Environment Variable
 .env
 .env.development
-.env_test
+.env.test
 .env.production
-
-node_modules
