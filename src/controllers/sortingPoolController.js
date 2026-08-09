@@ -1,5 +1,5 @@
-const { checkDataSortingPoolModel } = require('../models/sortingPoolModel');
-const { logInfo, logError } = require('../utils/logger');
+const { checkDataSortingPoolModel } = require("../models/sortingPoolModel");
+const { logInfo, logError } = require("../utils/logger");
 
 const checkDataSortingPoolController = async (req, res) => {
     const { nopick } = req.body;
@@ -7,10 +7,10 @@ const checkDataSortingPoolController = async (req, res) => {
     try {
         // Validasi input
         if (!nopick) {
-            logError('Error in checkDataSortingPoolController: Number pick is required');
+            logError("Error in checkDataSortingPoolController: Number pick is required");
             return res.status(400).json({
                 success: false,
-                message: 'Number pick is required'
+                message: "Number pick is required",
             });
         }
 
@@ -19,10 +19,10 @@ const checkDataSortingPoolController = async (req, res) => {
 
         // Memeriksa apakah respons kosong
         if (!response || response.length === 0) {
-            logInfo(`Info in checkDataSortingPoolController: Data hasil pick dan scan nomor ${nopick} tidak ditemukan`);
+            logInfo(`Info in checkDataSortingPoolController: Data PB nomor pick ${nopick} tidak ada, belum selesai scan atau sudah selesai loading.`);
             return res.status(404).json({
                 success: false,
-                message: `Data hasil pick dan scan nomor ${nopick} tidak ditemukan`
+                message: `Data PB nomor pick ${nopick} tidak ada, belum selesai scan, atau sudah selesai loading.`,
             });
         }
 
@@ -30,18 +30,17 @@ const checkDataSortingPoolController = async (req, res) => {
         logInfo(`Info in checkDataSortingPoolController: Data hasil pick dan scan nomor ${nopick} ditemukan`);
         return res.status(200).json({
             success: true,
-            data: response
+            data: response,
         });
-
     } catch (error) {
         logError(`Error in checkDataSortingPoolController: ${error.message}`);
         return res.status(500).json({
             success: false,
-            message: error.message
+            message: error.message,
         });
     }
 };
 
 module.exports = {
-    checkDataSortingPoolController
+    checkDataSortingPoolController,
 };

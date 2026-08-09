@@ -10,7 +10,7 @@ const checkDataSortingPoolModel = async (nopick) => {
             SELECT a.NoToko, a.NO_URUTSP, a.TglPic, a.Toko, a.Gate, b.TOK_NAME
             FROM dpd_TokoDPD a
             INNER JOIN dc_toko_t b ON a.Toko = b.TOK_CODE
-            WHERE a.NoToko = @nopick AND a.FBackup = 1 AND a.Fgo IS NULL
+            WHERE a.NoToko = @nopick AND a.fscanfraction = 1 AND a.floading IS NULL
         `;
         const requestStore = pool.request();
         requestStore.input("nopick", sql.VarChar, nopick);
@@ -19,7 +19,7 @@ const checkDataSortingPoolModel = async (nopick) => {
 
         // Memastikan bahwa hasil query tidak kosong
         if (resultStore.recordset.length === 0) {
-            logInfo(`Info in checkDataSortingPoolModel: Data hasil pick dan scan nomor ${nopick} tidak ada, belum backup atau sudah selesai loading.`);
+            logInfo(`Info in checkDataSortingPoolModel: Data PB nomor pick ${nopick} tidak ada, belum selesai scan atau sudah selesai loading.`);
             return []; // Mengembalikan array kosong jika tidak ada data
         }
 
@@ -30,7 +30,7 @@ const checkDataSortingPoolModel = async (nopick) => {
         const queryDetails = `
             SELECT Zona, Nomor, DusNo, FPakai
             FROM Dpd_Container_Trans
-            WHERE NoToko = @nopick AND FPakai = 1
+            WHERE NoToko = @nopick ORDER BY Nomor ASC
         `;
         const requestDetails = pool.request();
         requestDetails.input("nopick", sql.VarChar, nopick);
