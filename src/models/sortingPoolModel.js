@@ -30,7 +30,7 @@ const checkDataSortingPoolModel = async (nopick) => {
         const queryDetails = `
             SELECT Zona, Nomor, DusNo, FPakai
             FROM Dpd_Container_Trans
-            WHERE NoToko = @nopick ORDER BY Nomor ASC
+            WHERE NoToko = @nopick AND FPakai = 1 ORDER BY Nomor ASC
         `;
         const requestDetails = pool.request();
         requestDetails.input("nopick", sql.VarChar, nopick);
