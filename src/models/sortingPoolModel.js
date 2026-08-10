@@ -46,6 +46,37 @@ const checkDataSortingPoolModel = async (nopick) => {
     }
 };
 
+const checkDataByTglAndSPModel = async (tglPic, noUrutSp) => {
+    try {
+        const pool = await getPool();
+
+        // Query untuk mengambil list nomor pick berdasarkan TglPic dan NO_URUTSP
+        const queryStore = `
+            SELECT a.NoToko as nopick, a.NO_URUTSP, a.TglPic, a.Toko, a.Gate, b.TOK_NAME
+            FROM dpd_TokoDPD a
+            INNER JOIN dc_toko_t b ON a.Toko = b.TOK_CODE
+            WHERE a.TglPic = @tglPic AND a.NO_URUTSP = @noUrutSp AND a.fscanfraction = 1 AND a.floading IS NULL
+        `;
+        const requestStore = pool.request();
+        requestStore.input("tglPic", sql.Date, tglPic);
+        requestStore.input("noUrutSp", sql.VarChar, noUrutSp);
+
+        const resultStore = await requestStore.query(queryStore);
+
+        // Memastikan bahwa hasil query tidak kosong
+        if (resultStore.recordset.length === 0) {
+            logInfo(`Info in checkDataByTglAndSPModel: Data PB tanggal pick ${tglPic} SP ${noUrutSp} tidak ada.`);
+            return []; // Mengembalikan array kosong jika tidak ada data
+        }
+
+        return resultStore.recordset;
+    } catch (err) {
+        logError("Error in checkDataByTglAndSPModel: Error saat mengambil data hasil picking dan scanning:", err);
+        throw err;
+    }
+};
+
 module.exports = {
     checkDataSortingPoolModel,
+    checkDataByTglAndSPModel,
 };
