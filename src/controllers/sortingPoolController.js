@@ -19,15 +19,15 @@ const checkDataSortingPoolController = async (req, res) => {
 
         // Memeriksa apakah respons kosong
         if (!response || response.length === 0) {
-            logInfo(`Info in checkDataSortingPoolController: Data PB nomor pick ${nopick} tidak ada, belum selesai scan atau sudah selesai loading.`);
+            logInfo(`Info in checkDataSortingPoolController: Data picking nomor ${nopick} tidak ditemukan atau sudah selesai loading.`);
             return res.status(404).json({
                 success: false,
-                message: `Data PB nomor pick ${nopick} tidak ada, belum selesai scan, atau sudah selesai loading.`,
+                message: `Data picking nomor ${nopick} tidak ditemukan atau sudah selesai loading.`,
             });
         }
 
         // Jika data ditemukan
-        logInfo(`Info in checkDataSortingPoolController: Data hasil pick dan scan nomor ${nopick} ditemukan`);
+        logInfo(`Info in checkDataSortingPoolController: Data picking nomor ${nopick} ditemukan`);
         return res.status(200).json({
             success: true,
             data: response,
@@ -60,10 +60,10 @@ const checkDataByTglAndSPController = async (req, res) => {
 
         // Memeriksa apakah respons kosong
         if (!response || response.length === 0) {
-            logInfo(`Info in checkDataByTglAndSPController: Data PB tanggal pick ${tglPic} SP ${noUrutSp} tidak ada.`);
+            logInfo(`Info in checkDataByTglAndSPController: Data picking tanggal ${tglPic} SP ${noUrutSp} tidak ditemukan atau sudah selesai loading.`);
             return res.status(404).json({
                 success: false,
-                message: `Data PB tanggal pick ${tglPic} SP ${noUrutSp} tidak ada.`,
+                message: `Data picking tanggal ${tglPic} SP ${noUrutSp} tidak ditemukan atau sudah selesai loading.`,
             });
         }
 
