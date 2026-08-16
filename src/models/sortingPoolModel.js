@@ -7,10 +7,10 @@ const checkDataSortingPoolModel = async (nopick) => {
 
         // Query untuk mengambil Urut dari dpd_TokoDPD
         const queryStore = `
-            SELECT a.fscanfraction, a.NoToko, a.NO_URUTSP, a.TglPic, a.Toko, a.Gate, b.TOK_NAME
+            SELECT a.fscanfraction, a.floading, a.NoToko, a.NO_URUTSP, a.TglPic, a.Toko, a.Gate, b.TOK_NAME
             FROM dpd_TokoDPD a
             INNER JOIN dc_toko_t b ON a.Toko = b.TOK_CODE
-            WHERE a.NoToko = @nopick AND a.floading IS NULL
+            WHERE a.NoToko = @nopick
         `;
         const requestStore = pool.request();
         requestStore.input("nopick", sql.VarChar, nopick);
@@ -19,7 +19,7 @@ const checkDataSortingPoolModel = async (nopick) => {
 
         // Memastikan bahwa hasil query tidak kosong
         if (resultStore.recordset.length === 0) {
-            logInfo(`Info in checkDataSortingPoolModel: Data pick nomor ${nopick} tidak ditemukan atau sudah selesai loading.`);
+            logInfo(`Info in checkDataSortingPoolModel: Data pick nomor ${nopick} tidak ditemukan.`);
             return []; // Mengembalikan array kosong jika tidak ada data
         }
 
@@ -52,10 +52,10 @@ const checkDataByTglAndSPModel = async (tglPic, noUrutSp) => {
 
         // Query untuk mengambil list nomor pick berdasarkan TglPic dan NO_URUTSP
         const queryStore = `
-            SELECT a.fscanfraction, a.NoToko as nopick, a.NO_URUTSP, a.TglPic, a.Toko, a.Gate, b.TOK_NAME
+            SELECT a.fscanfraction, a.floading, a.NoToko as nopick, a.NO_URUTSP, a.TglPic, a.Toko, a.Gate, b.TOK_NAME
             FROM dpd_TokoDPD a
             INNER JOIN dc_toko_t b ON a.Toko = b.TOK_CODE
-            WHERE a.TglPic = @tglPic AND a.NO_URUTSP = @noUrutSp AND a.floading IS NULL
+            WHERE a.TglPic = @tglPic AND a.NO_URUTSP = @noUrutSp
         `;
         const requestStore = pool.request();
         requestStore.input("tglPic", sql.Date, tglPic);
@@ -65,7 +65,7 @@ const checkDataByTglAndSPModel = async (tglPic, noUrutSp) => {
 
         // Memastikan bahwa hasil query tidak kosong
         if (resultStore.recordset.length === 0) {
-            logInfo(`Info in checkDataByTglAndSPModel: Data PB tanggal pick ${tglPic} SP ${noUrutSp} tidak ada.`);
+            logInfo(`Info in checkDataByTglAndSPModel: Data PB tanggal pick ${tglPic} SP ${noUrutSp} tidak ditemukan.`);
             return []; // Mengembalikan array kosong jika tidak ada data
         }
 
